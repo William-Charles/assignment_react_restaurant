@@ -1,16 +1,17 @@
-import React from ('react');
+import React from "react";
+import EntreeCard from "./entreeCard";
 
 //borked, figure this out:
-const Menu = ({food}) => {
+const Menu = ({ food }) => {
   const cards = food.map(entree => (
-    <li entree={entree} key={food.something} />
+    <EntreeCard entree={entree} key={entree.name} />
   ));
 
   return (
-    <li>
-
-    </li>
-  )
-}
+    <div className="EntreeCard container" id="menu">
+      {cards}
+    </div>
+  );
+};
 
 export default Menu;
