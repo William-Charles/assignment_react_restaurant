@@ -1,47 +1,49 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import Navbar from "./navbar";
-import Header from "./header";
-import Reservation from "./reservationForm";
-import Menu from "./menu";
-import "./App.css";
+import React, { Component } from 'react';
+import Navbar from './navbar';
+import Header from './header';
+import Reservation from './reservationForm';
+import Menu from './menu';
+import './App.css';
 
-const food = [
+const dinner = [
   {
-    name: "Sven",
-    desc: "Food that is amazing",
+    name: 'Sven',
+    desc: 'Food that is amazing',
     price: 30,
-    category: "Dinner"
+    category: 'Dinner'
   },
   {
-    name: "Olga",
+    name: 'Olga',
     desc: "food that isn't great",
     price: 12,
-    category: "Dinner"
+    category: 'Dinner'
   },
   {
-    name: "Erik",
-    desc: "food that is good",
+    name: 'Erik',
+    desc: 'food that is good',
     price: 22,
-    category: "Dinner"
-  },
+    category: 'Dinner'
+  }
+];
+
+const dessert = [
   {
-    name: "Cake",
-    desc: "Food that is amazing",
+    name: 'Cake',
+    desc: 'Food that is amazing',
     price: 30,
-    category: "Dessert"
+    category: 'Dessert'
   },
   {
-    name: "Pie",
+    name: 'Pie',
     desc: "food that isn't great",
     price: 12,
-    category: "Dessert"
+    category: 'Dessert'
   },
   {
-    name: "Ice Cream",
-    desc: "food that is good",
+    name: 'Ice Cream',
+    desc: 'food that is good',
     price: 22,
-    category: "Dessert"
+    category: 'Dessert'
   }
 ];
 
@@ -52,7 +54,9 @@ class App extends Component {
         <Navbar />
         <Header />
         <Reservation />
-        <Menu food={food} />
+
+        <Menu food={dinner} category="~Dinner~" color="red" />
+        <Menu food={dessert} category="~Dessert~" color="blue" />
       </div>
     );
   }
