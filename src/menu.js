@@ -1,15 +1,16 @@
-import React from 'react';
-import EntreeCard from './entreeCard';
+import React from "react";
+import EntreeCard from "./entreeCard";
+
+let divStyle;
 
 //borked, figure this out:
 const Menu = ({ food, category, color }) => {
-  const cards = food.map(entree => (
-    <EntreeCard entree={entree} key={entree.name} color=`style='color: ${color}'`/>
-  ));
-
-  Menu.defaultProps = {
-    color: 'default'
+  divStyle = {
+    color: color
   };
+  const cards = food.map(entree => (
+    <EntreeCard color={color} entree={entree} key={entree.name} />
+  ));
 
   return (
     <div className="EntreeCard container" id="menu">
