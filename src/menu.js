@@ -14,7 +14,7 @@ const Menu = ({ food, category, color }) => {
 
   return (
     <div className="EntreeCard container" id="menu">
-      <h2>{category}</h2>
+      <h2 id={category}>{category}</h2>
       {cards}
     </div>
   );

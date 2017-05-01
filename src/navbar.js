@@ -23,9 +23,11 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="main-nav-collapse">
 
           <ul className="nav navbar-nav navbar-right">
-            <li><a href="#">Header</a></li>
             <li><a href="#reservation">Reservation</a></li>
-            <li><a href="#menu">Menu</a></li>
+            <li><a href="#Appetizers">Apps</a></li>
+            <li><a href="#Dinner">Dinner</a></li>
+            <li><a href="#Dessert">Dessert</a></li>
+
           </ul>
 
         </div>
